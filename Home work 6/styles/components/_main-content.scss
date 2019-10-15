@@ -1,0 +1,115 @@
+.main-content {
+  width: 82%;
+  border-left: solid #e0e4ed 1px;
+  background: white;
+  position: relative;
+
+  @include max(650px) {
+    width: 100%;
+  }
+
+  &_text {
+    display: flex;
+    flex-wrap: wrap;
+
+    & h1 {
+      width: 100%;
+      display: block;
+      background: white;
+      padding: 30px 0 20px 20px;
+      font: 30px Georgia;
+
+      @include max(650px) {
+        text-align: center;
+        padding-left: 0;
+        font-size: 34px;
+        padding: 25px 10px;
+      }
+
+      & span {
+        margin-left: 28px;
+        border-bottom: dashed 1px;
+        position: relative;
+
+        &:after {
+          content: "\f107";
+          position: absolute;
+          font: 30px/1 FontAwesome;
+          padding-left: 10px;
+          border: 0px;
+          top: 0px;
+        }
+      }
+    }
+
+    & .form {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f2f4f8;
+      padding: 5px 20px;
+      color: #99a1b3;
+
+      & .new-item span {
+        font: 12px Georgia;
+        height: 100%;
+
+        &:after {
+          content: "\f1de";
+          font: normal normal normal 14px/1 FontAwesome;
+          margin-left: 20px;
+        }
+      }
+
+      & input[type="text"] {
+        padding-left: 10px;
+        outline: none;
+        font: 14px Arial;
+        width: 270px;
+        height: 40px;
+        border: solid #d6d9e1 1px;
+        border-radius: 5px;
+        display: inline-block;
+        background: url(../images/search.png) no-repeat 240px 9px;
+        background-color: white;
+      }
+    }
+
+    &-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      & a {
+        text-decoration: none;
+        color: black;
+        font: 14px Arial;
+        border: solid #99a1b3 1px;
+        border-radius: 4px;
+
+        &:first-child {
+          margin-right: 10px;
+          padding: 10px 18px 10px 13px;
+
+          &:before {
+            content: "\f104";
+            font: normal normal normal 14px/1 FontAwesome;
+            padding-right: 10px;
+          }
+        }
+
+        &:last-child {
+          padding: 10px 13px 10px 18px;
+
+          &:after {
+            content: "\f105";
+            font: normal normal normal 14px/1 FontAwesome;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
