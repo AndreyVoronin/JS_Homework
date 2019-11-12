@@ -59,8 +59,14 @@ function divideText(str) {
     var arrStr = str.split(/[.!?]/);
     arrStr.pop();
 
+    var lastStr = arrStr[arrStr.length - 1];
+
+    if (/[а-яА-ЯA-Za-z]/.test(lastStr[lastStr.length-1])) {
+        arrStr.splice(arrStr.length-1, 1);
+    }
+
     function arrStrLength(arr) {
-        var arrLength = arr.trim().split('').filter(deleteSymbol).join('').length;
+        var arrLength = arr.split('').filter(deleteSymbol).length;
 
         function deleteSymbol(str) {
 
@@ -72,10 +78,10 @@ function divideText(str) {
 
     }
 
-    return arrStr.map(arrStrLength).join(';\n');
+    return arrStr.map(arrStrLength);
 
 }
 
 divideText('Скажи-ка, дядя, ведь не даром Москва, спаленная пожаром, ' +
     'Французу отдана? Ведь были ж схватки боевые, ' +
-    'Да, говорят, еще какие! Недаром помнит вся Россия Про день Бородина!');
+    'Да, говорят, еще какие! Недаром помнит вся Россия Про день Бородина.');
