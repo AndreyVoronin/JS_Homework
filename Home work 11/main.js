@@ -1,4 +1,4 @@
-/**Задание 1:
+﻿/**Задание 1:
  Написать функцию, принимающую массив имен и возвращающую массив объектов вида {name: 'Vasya'}.*/
 
 function changeArrOfNames(array) {
@@ -74,7 +74,7 @@ function divideText(str) {
 
         }
 
-        return arr + ' - ' + arrLength + ' букв';
+        return arr.trim() + ' - ' + arrLength + ' букв';
 
     }
 
