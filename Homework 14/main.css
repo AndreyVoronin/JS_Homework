@@ -1,0 +1,73 @@
+body {
+    background: black;
+}
+
+button {
+    height: 50px;
+    background: cadetblue;
+    margin: 50px;
+    font-size: 20px;
+}
+
+span {
+    color: red;
+}
+
+.wrapper {
+    margin: 50px;
+}
+
+.user_number {
+    display: inline-block;
+    padding: 15px 10px 0;
+    height: 35px;
+    text-align: center;
+    background: blanchedalmond;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.user_number:hover {
+    background: burlywood;
+    transform: scale(1.1);
+}
+
+.user_number + .user_number {
+    margin-left: 1px;
+}
+
+.user_info {
+    width: 400px;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: blanchedalmond;
+    position: absolute;
+    display: none;
+
+
+}
+
+.info {
+    display: inline-block;
+    vertical-align: center;
+    padding-left: 20px;
+}
+
+.active {
+    position: relative;
+    background: bisque;
+}
+
+.vision {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
