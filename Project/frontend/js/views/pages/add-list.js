@@ -81,6 +81,11 @@ class AddAndList extends Component {
                 </div>
             </div>
             <div class="fish-forecast">                
+            </div>
+            <div class="forecast-wrapper hidden">
+                <div class="wave width_forecast"></div>
+                <div class="wave1 width_forecast"></div>
+                <div class="wave2 width_forecast"></div>
             </div>                    
 			`);
 		});
@@ -107,8 +112,9 @@ class AddAndList extends Component {
               descElement = document.querySelector(".temperature-description p"),
               locationElement = document.querySelector(".location p"),
               notificationElement = document.querySelector(".notification"),
-              addFishButtons = document.getElementsByClassName('choose-container')[1],
-              fishDescription = document.getElementsByClassName('fish-forecast')[0];
+              addFishButtons = document.getElementsByClassName("choose-container")[1],
+              fishDescription = document.getElementsByClassName("fish-forecast")[0],
+              fishForecast = document.getElementsByClassName("forecast-wrapper")[0];
 
         const weather = {};
 
@@ -162,6 +168,8 @@ class AddAndList extends Component {
         }
 
         function displayWeather(){
+            let temperature = Math.round(weather.temperature.value);
+
             iconElement.innerHTML = `<img src="images/icons/${weather.iconId}.png"/>`;
             tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
             pressureElement.innerHTML = `${weather.pressure} <span>hpa</span>`;
@@ -169,9 +177,7 @@ class AddAndList extends Component {
             descElement.innerHTML = weather.description;
             locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 
-            if (fishDescription.children.length) {
-                showForecastBite();
-            }
+            temperatureToPercent(temperature);
         }
 
         function celsiusToFahrenheit(temperature){
@@ -195,7 +201,7 @@ class AddAndList extends Component {
               addCity();
 
         function addCity(){
-            let api = `current.city.list.min.json`;
+            let api = `http://localhost:3000/api/current.city.list.min`;
 
             fetch(api)
                 .then(function(response){
@@ -235,26 +241,105 @@ class AddAndList extends Component {
             while (target != this) {
                 if (target.tagName === 'BUTTON') {
                     showFish = `<div class="fish-forecast__title">
-                    <h1>Прогноз клёва</h1>
+                    <h1>Описание</h1>
                         </div>
                     <div class="fish-container">
                             <div class="fish-logo"><img src="images/${target.dataset.image}"/><span>${target.dataset.name}</span></div>                            
                             <div class="fish-description">${target.dataset.description}</div>                                      
                     </div>
-                    <div class="fish-forecast__bite"></div>
                     `;
                     fishDescription.innerHTML = showFish;
+                    fishForecast.classList.remove('hidden');
                 }
                 target = target.parentNode;
             }
-            showForecastBite();
         });
 
-        function showForecastBite() {
-            const fishForecast = document.getElementsByClassName('fish-forecast__bite')[0];
-            let html = `<div>${weather.temperature.value}</div>`;
+        function temperatureToPercent(temperature) {
+            let percent;
+            switch (temperature) {
+                case -10:
+                    percent = 100;
+                    break;
+                case -9:
+                    percent = 95;
+                    break;
+                case -8:
+                    percent = 90;
+                    break;
+                case -7:
+                    percent = 85;
+                    break;
+                case -6:
+                    percent = 80;
+                    break;
+                case -5:
+                    percent = 75;
+                    break;
+                case -4:
+                    percent = 70;
+                    break;
+                case -3:
+                    percent = 65;
+                    break;
+                case -2:
+                    percent = 60;
+                    break;
+                case -1:
+                    percent = 55;
+                    break;
+                case 0:
+                    percent = 50;
+                    break;
+                case 1:
+                    percent = 45;
+                    break;
+                case 2:
+                    percent = 40;
+                    break;
+                case 3:
+                    percent = 35;
+                    break;
+                case 4:
+                    percent = 30;
+                    break;
+                case 5:
+                    percent = 25;
+                    break;
+                case 6:
+                    percent = 20;
+                    break;
+                case 7:
+                    percent = 15;
+                    break;
+                case 8:
+                    percent = 10;
+                    break;
+                case 9:
+                    percent = 5;
+                    break;
+                case 10:
+                    percent = 0;
+                    break;
+                default:
+                    percent = 10;
+            }
+            showForecastBite(percent);
+        }
 
-            fishForecast.innerHTML = html;
+        function showForecastBite(percent) {
+            let widthForecast = document.getElementsByClassName("width_forecast"),
+                widthForecastArr = [];
+
+            for (let i = 0; i < widthForecast.length; i++ ) {
+                widthForecastArr.push(widthForecast[i]);
+            }
+
+            widthForecastArr.forEach(function (element) {
+                element.classList.remove(`width-${element.dataset.percent}`);
+                element.setAttribute('data-percent', percent);
+                element.classList.add(`width-${percent}`);
+            })
         }
     }
 }

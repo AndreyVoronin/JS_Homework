@@ -3,6 +3,7 @@ const express = require('express'),
       morgan = require('morgan'),
 	  fs = require('file-system'),
 	  dataFile = 'allfish.json',
+	  dataCity = 'current.city.list.min.json',
       app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -16,11 +17,19 @@ app.use((req, res, next) => {
 });
 
 app.get('/api/allfish', (req, res) => {
-	res.send(getTasksFromDB());
+	res.send(getAllFishFromDB());
 });
 
-function getTasksFromDB() {
+app.get('/api/current.city.list.min', (req, res) => {
+	res.send(getAllCityFromDB());
+});
+
+function getAllFishFromDB() {
     return JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+}
+
+function getAllCityFromDB() {
+	return JSON.parse(fs.readFileSync(dataCity, 'utf8'));
 }
 
 app.listen(3000, () => console.log('Server working...'));

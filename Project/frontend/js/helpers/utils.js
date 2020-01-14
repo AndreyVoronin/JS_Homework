@@ -3,7 +3,7 @@ class Utils {
         const url = location.hash.slice(2),
             request = {};
 
-        [request.resource] = url.split('/');
+        [request.resource, request.id, request.action] = url.split('/');
 
         return request;
     }

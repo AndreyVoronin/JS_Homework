@@ -64,10 +64,65 @@
   &-container{
     text-align: center;
     color: #293251;
-    font-size: 25px;
+    font-size: 20px;
     margin: auto auto;
   }
 }
+
+.forecast-wrapper{
+  width: 97%;
+  border: 1px solid black;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background: white url('../../images/percent-1.png') no-repeat center;
+
+
+  & .wave{
+    background-repeat: repeat-x;
+    animation: waves 2s linear infinite;
+    z-index: 0;
+    opacity: .5;
+  }
+
+  & .wave1{
+    background-repeat: repeat-x;
+    animation: waves 4s linear infinite;
+    opacity: .5;
+    z-index: 11;
+  }
+
+  & .wave2{
+    background-repeat: repeat-x;
+    animation: waves 6s linear infinite;
+    opacity: .5;
+    z-index: 15;
+  }
+}
+
+.width_forecast{
+  position: absolute;
+  bottom: -11px;
+  background-image: url('../../images/wave.png');
+  transition: all 5s;
+  height: 100%;
+}
+
+@keyframes waves{
+  0%{
+    background-position: 0;
+
+  }
+  100%{
+    background-position: 200px;
+
+  }
+}
+
+
 
 
 
