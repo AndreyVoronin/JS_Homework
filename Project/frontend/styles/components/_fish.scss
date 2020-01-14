@@ -1,0 +1,73 @@
+.fish{
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 10px;
+  background: white;
+  transition: all 0.1s;
+
+  & span{
+    margin: auto auto;
+    font: 18px "Rimouski";
+  }
+
+  &:hover{
+    transform: scale(1.2);
+    background: #293251;
+    color: white;
+    cursor: pointer;
+  }
+
+  &-forecast{
+    margin: 30px;
+    background: white;
+    border-radius: 10px;
+
+    &__bite{
+      margin: 10px;
+      text-align: center;
+    }
+
+    &__title{
+      border-radius: 10px 10px 0 0;
+
+      & h1{
+        text-align: center;
+        margin: 15px auto;
+        font-size: 30px;
+        color: #293251;
+      }
+    }
+  }
+
+  &-logo{
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 5px 5px 15px;
+    color: white;
+    font: 18px "Rimouski";
+    background: #293251;
+
+    & img{
+      padding: 5px 0 0 5px;
+    }
+
+    & span{
+      padding: 0 5px;
+    }
+  }
+
+  &-description{
+    margin: 10px;
+  }
+
+  &-container{
+    text-align: center;
+    color: #293251;
+    font-size: 25px;
+    margin: auto auto;
+  }
+}
+
+
+
