@@ -1,0 +1,356 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.hidden {
+  display: none; }
+
+.width-0 {
+  width: 0; }
+.width-5 {
+  width: 5%; }
+.width-10 {
+  width: 10%; }
+.width-15 {
+  width: 15%; }
+.width-20 {
+  width: 20%; }
+.width-25 {
+  width: 25%; }
+.width-30 {
+  width: 30%; }
+.width-35 {
+  width: 35%; }
+.width-40 {
+  width: 40%; }
+.width-45 {
+  width: 45%; }
+.width-50 {
+  width: 50%; }
+.width-55 {
+  width: 55%; }
+.width-60 {
+  width: 60%; }
+.width-65 {
+  width: 65%; }
+.width-70 {
+  width: 70%; }
+.width-75 {
+  width: 75%; }
+.width-80 {
+  width: 80%; }
+.width-90 {
+  width: 90%; }
+.width-95 {
+  width: 95%; }
+.width-100 {
+  width: 100%; }
+
+.page-container {
+  width: 100%; }
+  .page-container .content-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 830px;
+  text-align: center;
+  font-size: 100px; }
+  .about__info {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 100px; }
+  .about__btn-start {
+    padding: 12px 16px;
+    font-size: 50px;
+    border: 2px solid black;
+    color: black;
+    transition: all .5s; }
+    .about__btn-start:hover {
+      border-radius: 20px; }
+
+.container {
+  width: 30%;
+  background-color: #FFF;
+  font-family: "Rimouski",SansSerif, serif;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding-bottom: 50px; }
+
+.app-title {
+  height: 50px;
+  border-radius: 10px 10px 0 0; }
+
+.app-title h1 {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #293251; }
+
+.notification {
+  background-color: #f8d7da;
+  display: none; }
+
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0; }
+
+.inner-container {
+  overflow: hidden;
+  height: 350px;
+  background-color: #F4F9FF;
+  padding: 10px 0; }
+
+.weather-icon {
+  height: 128px; }
+
+.weather-icon img {
+  display: block;
+  margin: 0 auto; }
+
+.temperature-value {
+  height: 60px; }
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #293251;
+  font-size: 4em;
+  text-align: center; }
+
+.temperature-value span {
+  color: #293251;
+  font-size: 0.5em; }
+
+.temperature-description p, .pressure-value p, .wind-speed p {
+  padding: 8px;
+  margin: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 25px; }
+
+.location p {
+  margin: 0;
+  padding: 0;
+  color: #293251;
+  text-align: center;
+  font-size: 20px; }
+
+.icon {
+  height: 128px; }
+
+.icon img {
+  display: block;
+  margin: 0 auto; }
+
+.santa {
+  position: absolute;
+  top: -15px;
+  right: 175px; }
+
+.fish {
+  display: inline-block; }
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative; }
+
+.no-video .video-container video,
+.touch .video-container video {
+  display: none; }
+
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important; }
+
+.video-container {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000; }
+
+.video-container .poster img {
+  width: 100%;
+  bottom: 0;
+  position: absolute; }
+
+.video-container .filter {
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%; }
+
+.video-container video {
+  position: absolute;
+  z-index: 0;
+  bottom: 0; }
+
+.video-container video.fillWidth {
+  width: 100%; }
+
+.hidden {
+  display: none; }
+
+.choose-container {
+  text-align: center;
+  padding-top: 30px;
+  color: #293251;
+  font-size: 25px;
+  margin: auto auto; }
+  .choose-container label {
+    padding: 8px;
+    margin: 25px 0;
+    text-align: center;
+    font-size: 25px;
+    display: block; }
+    .choose-container label select {
+      font-size: 20px;
+      border: 1px solid #293251;
+      border-radius: 10px;
+      width: 185px; }
+
+.fish {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 10px;
+  background: white;
+  transition: all 0.1s; }
+  .fish span {
+    margin: auto auto;
+    font: 18px "Rimouski"; }
+  .fish:hover {
+    transform: scale(1.2);
+    background: #293251;
+    color: white;
+    cursor: pointer; }
+  .fish-forecast {
+    margin: 30px;
+    background: white;
+    border-radius: 10px; }
+    .fish-forecast__bite {
+      margin: 10px;
+      text-align: center; }
+    .fish-forecast__title {
+      border-radius: 10px 10px 0 0; }
+      .fish-forecast__title h1 {
+        text-align: center;
+        margin: 15px auto;
+        font-size: 30px;
+        color: #293251; }
+  .fish-logo {
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 5px 5px 15px;
+    color: white;
+    font: 18px "Rimouski";
+    background: #293251; }
+    .fish-logo img {
+      padding: 5px 0 0 5px; }
+    .fish-logo span {
+      padding: 0 5px; }
+  .fish-description {
+    margin: 10px; }
+  .fish-container {
+    text-align: center;
+    color: #293251;
+    font-size: 20px;
+    margin: auto auto; }
+
+.forecast-wrapper {
+  width: 97%;
+  border: 1px solid black;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background: white url("../../images/percent-1.png") no-repeat center; }
+  .forecast-wrapper .wave {
+    background-repeat: repeat-x;
+    animation: waves 2s linear infinite;
+    z-index: 0;
+    opacity: .5; }
+  .forecast-wrapper .wave1 {
+    background-repeat: repeat-x;
+    animation: waves 4s linear infinite;
+    opacity: .5;
+    z-index: 11; }
+  .forecast-wrapper .wave2 {
+    background-repeat: repeat-x;
+    animation: waves 6s linear infinite;
+    opacity: .5;
+    z-index: 15; }
+
+.width_forecast {
+  position: absolute;
+  bottom: -11px;
+  background-image: url("../../images/wave.png");
+  transition: all 5s;
+  height: 100%; }
+
+@keyframes waves {
+  0% {
+    background-position: 0; }
+  100% {
+    background-position: 200px; } }
+
+/*# sourceMappingURL=main.css.map */
