@@ -41,9 +41,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.hidden {
-  display: none; }
-
 .width-0 {
   width: 0; }
 .width-5 {
@@ -84,6 +81,9 @@ table {
   width: 95%; }
 .width-100 {
   width: 100%; }
+
+.hidden {
+  display: none; }
 
 .page-container {
   width: 100%; }
