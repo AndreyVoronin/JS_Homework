@@ -77,6 +77,11 @@
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 10px;
+<<<<<<< HEAD
+=======
+  background-size: cover;
+  background: white url('../../images/percent-1.png') no-repeat center;
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 
 
   & .wave{
@@ -98,6 +103,7 @@
     animation: waves 6s linear infinite;
     opacity: .5;
     z-index: 15;
+<<<<<<< HEAD
 
     & span{
       float: right;
@@ -107,6 +113,8 @@
       opacity: 1;
       transition: all 5s;
     }
+=======
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
   }
 }
 

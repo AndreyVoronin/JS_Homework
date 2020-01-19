@@ -1,7 +1,11 @@
 import Utils from './helpers/utils.js';
 import AppAbout from './views/pages/app-about.js';
 import AppError404 from './views/pages/app-error404.js';
+<<<<<<< HEAD
 import AddAndList from './views/pages/app-main.js';
+=======
+import AddAndList from './views/pages/add-list.js';
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 
 const Routes = {
     '/': AppAbout,

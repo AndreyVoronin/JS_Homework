@@ -41,6 +41,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+<<<<<<< HEAD
 body {
   min-width: 1869px; }
 
@@ -50,6 +51,11 @@ body {
 .vision {
   display: block; }
 
+=======
+.hidden {
+  display: none; }
+
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 .width-0 {
   width: 0; }
 .width-5 {
@@ -126,12 +132,15 @@ body {
   margin: 10px auto;
   border-radius: 10px;
   padding-bottom: 50px; }
+<<<<<<< HEAD
   @media only screen and (max-width: 1869px) {
     .container {
       width: 45%; } }
   @media only screen and (max-width: 1000px) {
     .container {
       width: 95%; } }
+=======
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 
 .app-title {
   height: 50px;
@@ -235,6 +244,10 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
+<<<<<<< HEAD
+=======
+  overflow: hidden;
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
   background: #000; }
 
 .video-container .poster img {
@@ -332,7 +345,13 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+<<<<<<< HEAD
   margin-bottom: 10px; }
+=======
+  margin-bottom: 10px;
+  background-size: cover;
+  background: white url("../../images/percent-1.png") no-repeat center; }
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
   .forecast-wrapper .wave {
     background-repeat: repeat-x;
     animation: waves 2s linear infinite;
@@ -348,6 +367,7 @@ body {
     animation: waves 6s linear infinite;
     opacity: .5;
     z-index: 15; }
+<<<<<<< HEAD
     .forecast-wrapper .wave2 span {
       float: right;
       color: white;
@@ -355,6 +375,8 @@ body {
       margin-top: -12px;
       opacity: 1;
       transition: all 5s; }
+=======
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 
 .width_forecast {
   position: absolute;

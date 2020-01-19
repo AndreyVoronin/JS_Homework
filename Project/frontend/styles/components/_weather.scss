@@ -39,10 +39,16 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 .container{
   width: 30%;
   background-color: #FFF;
   font-family: "Rimouski",SansSerif, serif;
+<<<<<<< HEAD
   margin: 10px auto;
   border-radius: 10px;
   padding-bottom : 50px;
@@ -54,6 +60,13 @@
   @include max(1000px) {
     width: 95%;
   }
+=======
+
+  margin: 10px auto;
+
+  border-radius: 10px;
+  padding-bottom : 50px;
+>>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 }
 
 .app-title{
