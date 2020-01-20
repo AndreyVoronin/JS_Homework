@@ -39,19 +39,13 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
-.container{
+.container {
   width: 30%;
   background-color: #FFF;
-  font-family: "Rimouski",SansSerif, serif;
-<<<<<<< HEAD
+  font-family: "Rimouski", SansSerif, serif;
   margin: 10px auto;
   border-radius: 10px;
-  padding-bottom : 50px;
+  padding-bottom: 50px;
 
   @include max(1869px) {
     width: 45%;
@@ -60,13 +54,6 @@
   @include max(1000px) {
     width: 95%;
   }
-=======
-
-  margin: 10px auto;
-
-  border-radius: 10px;
-  padding-bottom : 50px;
->>>>>>> 1568b8e7df526591bee5e7f5ac297fff488417b9
 }
 
 .app-title{
